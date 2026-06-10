@@ -54,9 +54,9 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .bg-paper{background:var(--paper)}
 .bg-deep{background:linear-gradient(170deg,var(--deep),var(--deep2) 60%,var(--deep));color:var(--mint-soft)}
 .bg-deep::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--mint),transparent);opacity:.5}
-.band{background:linear-gradient(170deg,#0A1812,#0D1F16 55%,#0A1812);border-top:1px solid rgba(143,230,187,.3);border-bottom:1px solid rgba(143,230,187,.3)}
+.band{background:linear-gradient(170deg,#060D09,#0B1510 55%,#060D09);border-top:1px solid rgba(143,230,187,.38);border-bottom:1px solid rgba(143,230,187,.38)}
 .band::before{display:none}
-.band::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 56% 90% at 50% 50%,rgba(143,230,187,.06),transparent 70%);pointer-events:none}
+.band::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 56% 90% at 50% 50%,rgba(143,230,187,.08),transparent 70%);pointer-events:none}
 
 /* ============ TYPO ============ */
 .tag-line{display:flex;align-items:center;justify-content:center;gap:16px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--green);margin-bottom:26px;text-align:center;flex-wrap:wrap}
@@ -208,17 +208,6 @@ nav.scrolled{background:rgba(244,243,238,.94);backdrop-filter:blur(10px);box-sha
 .lock-foot{max-width:660px;margin:42px auto 0;text-align:center;font-size:1rem;line-height:1.7;color:var(--mint-soft)}
 .lock-foot strong{color:var(--mint)}
 
-/* светлый вариант кода к сейфу */
-.mech-light .lock-step{border:1px solid var(--line);background:var(--paper)}
-.mech-light .lock-step .ls-num{color:var(--green)}
-.mech-light .lock-step .ls-dial{border-color:var(--green);color:var(--green)}
-.mech-light .lock-step .ls-dial::after{border-color:rgba(28,92,68,.3)}
-.mech-light .lock-step h3{color:var(--ink)}
-.mech-light .lock-step p{color:var(--muted)}
-.mech-light .lock-foot{color:var(--body-c)}
-.mech-light .lock-foot strong{color:var(--ink)}
-.mech-light .lock-step:not(:last-child)::after{color:var(--green);text-shadow:none}
-
 /* ============ FUEL (CORTISOL/DOPAMINE) ============ */
 .fuel{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:880px;margin:0 auto}
 .fuel-col{border:1px solid var(--line);background:var(--paper);padding:32px 30px 28px;position:relative;overflow:hidden}
@@ -369,12 +358,12 @@ nav.scrolled{background:rgba(244,243,238,.94);backdrop-filter:blur(10px);box-sha
 .final-line strong{color:var(--mint);font-style:normal}
 
 /* ============ FOOTER ============ */
-footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:46px 28px 52px;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;color:var(--muted);line-height:2.1;text-align:center}
-footer .f-brand{color:var(--ink);font-weight:600;text-transform:uppercase;letter-spacing:.2em;margin-bottom:8px}
-footer .f-brand i{color:var(--green);font-style:normal}
-footer a{color:var(--green);text-decoration:none}
+footer{background:#0D1F16;border-top:1px solid rgba(143,230,187,.35);padding:46px 28px 52px;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;color:#7E8F82;line-height:2.1;text-align:center}
+footer .f-brand{color:#F2F1E8;font-weight:600;text-transform:uppercase;letter-spacing:.2em;margin-bottom:8px}
+footer .f-brand i{color:var(--mint);font-style:normal}
+footer a{color:var(--mint);text-decoration:none}
 footer a:hover{text-decoration:underline}
-footer .f-legal{margin-top:16px;color:var(--faint);font-size:.62rem;line-height:1.9;max-width:640px;margin-left:auto;margin-right:auto}
+footer .f-legal{margin-top:16px;color:#5C6B5F;font-size:.62rem;line-height:1.9;max-width:640px;margin-left:auto;margin-right:auto}
 
 /* ============ HIGHLIGHT MARKER (как на лид-магните) ============ */
 .hl{background:linear-gradient(180deg,transparent 58%,rgba(47,146,104,.22) 58%);padding:0 3px}
@@ -807,10 +796,39 @@ em.hl{font-style:italic}
   </div>
 </section>
 
-<!-- ============ CODE LOCK ============ -->
-<section class="sec bg-soft mech-light">
+<!-- ============ FUEL ============ -->
+<section class="sec">
   <div class="wrap">
-    <div class="tag-line"><span class="tl"></span><span>Глава 06 · Механизм</span><span class="tl"></span></div>
+    <div class="tag-line"><span class="tl"></span><span>Глава 06 · Топливо</span><span class="tl"></span></div>
+    <h2 class="sec-h">Рост через борьбу и рост через&nbsp;<em>вознаграждение</em></h2>
+    <p class="sec-sub">Цели можно достигать двумя способами: через «рвать себя» и через дофамин, гормон достижения. <span class="hl">Это два разных биохимических режима</span>, и они дают разные&nbsp;деньги.</p>
+
+    <div class="fuel">
+      <div class="fuel-col cort fade-in">
+        <div class="fuel-tag">Кортизол · режим борьбы</div>
+        <h3>«Рвать себя»</h3>
+        <svg class="fuel-wave" viewBox="0 0 300 46" preserveAspectRatio="none" aria-hidden="true">
+          <path pathLength="1" d="M0,38 L30,12 L55,40 L85,8 L110,42 L145,14 L170,40 L205,10 L235,42 L265,16 L300,38" fill="none" stroke="#A83024" stroke-width="1.6" opacity=".75"/>
+        </svg>
+        <p>Заставлять себя каждый день означает жить на кортизоле. К тому, кто привык всё отвоёвывать, деньги тоже придут через борьбу, и удерживать их придётся в борьбе, до изнеможения. <strong>Деньги не меняют состояние. Они умножают то, что есть.</strong></p>
+      </div>
+      <div class="fuel-col dopa fade-in d1">
+        <div class="fuel-tag">Дофамин · контур вознаграждения</div>
+        <h3>Система сама хочет&nbsp;повторить</h3>
+        <svg class="fuel-wave" viewBox="0 0 300 46" preserveAspectRatio="none" aria-hidden="true">
+          <path pathLength="1" d="M0,40 C60,38 90,30 140,26 C200,21 250,14 300,8" fill="none" stroke="#1C5C44" stroke-width="1.6"/>
+          <circle cx="300" cy="8" r="3.4" fill="#2F9268"/>
+        </svg>
+        <p>Достигать не через «рвать себя», а через дофамин, гормон достижения цели. Действия в сторону денег начинают подкрепляться, а не караться: то, что сработало, хочется повторить. <strong>Протокол построен на этом режиме</strong>: 15–20 минут в день, которые тело начинает ждать.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CODE LOCK ============ -->
+<section class="sec bg-deep">
+  <div class="wrap">
+    <div class="tag-line"><span class="tl"></span><span>Глава 07 · Механизм</span><span class="tl"></span></div>
     <h2 class="sec-h">Четыре уровня. Как код к&nbsp;<em>сейфу</em></h2>
     <p class="sec-sub">Программа держится сразу на четырёх уровнях. Пока вы трогаете один, остальные три возвращают всё назад. Вот и вся разгадка, почему «работает у всех, кроме меня»: почти все всю жизнь работают <span class="hl">с одним уровнем за&nbsp;раз</span>.</p>
 
@@ -843,35 +861,6 @@ em.hl{font-style:italic}
 
     <div class="lock-foot fade-in">
       Тронете один уровень, и три остальных вернут вас на потолок за неделю. Сдвигается только то, что меняют на всех четырёх сразу и в правильном порядке. Как набирают код к сейфу: <strong class="hl">те же цифры в другой последовательности замок не откроют</strong>, сколько ни дёргай ручку.
-    </div>
-  </div>
-</section>
-
-<!-- ============ FUEL ============ -->
-<section class="sec">
-  <div class="wrap">
-    <div class="tag-line"><span class="tl"></span><span>Глава 07 · Топливо</span><span class="tl"></span></div>
-    <h2 class="sec-h">Рост через борьбу и рост через&nbsp;<em>вознаграждение</em></h2>
-    <p class="sec-sub">Цели можно достигать двумя способами: через «рвать себя» и через дофамин, гормон достижения. <span class="hl">Это два разных биохимических режима</span>, и они дают разные&nbsp;деньги.</p>
-
-    <div class="fuel">
-      <div class="fuel-col cort fade-in">
-        <div class="fuel-tag">Кортизол · режим борьбы</div>
-        <h3>«Рвать себя»</h3>
-        <svg class="fuel-wave" viewBox="0 0 300 46" preserveAspectRatio="none" aria-hidden="true">
-          <path pathLength="1" d="M0,38 L30,12 L55,40 L85,8 L110,42 L145,14 L170,40 L205,10 L235,42 L265,16 L300,38" fill="none" stroke="#A83024" stroke-width="1.6" opacity=".75"/>
-        </svg>
-        <p>Заставлять себя каждый день означает жить на кортизоле. К тому, кто привык всё отвоёвывать, деньги тоже придут через борьбу, и удерживать их придётся в борьбе, до изнеможения. <strong>Деньги не меняют состояние. Они умножают то, что есть.</strong></p>
-      </div>
-      <div class="fuel-col dopa fade-in d1">
-        <div class="fuel-tag">Дофамин · контур вознаграждения</div>
-        <h3>Система сама хочет&nbsp;повторить</h3>
-        <svg class="fuel-wave" viewBox="0 0 300 46" preserveAspectRatio="none" aria-hidden="true">
-          <path pathLength="1" d="M0,40 C60,38 90,30 140,26 C200,21 250,14 300,8" fill="none" stroke="#1C5C44" stroke-width="1.6"/>
-          <circle cx="300" cy="8" r="3.4" fill="#2F9268"/>
-        </svg>
-        <p>Достигать не через «рвать себя», а через дофамин, гормон достижения цели. Действия в сторону денег начинают подкрепляться, а не караться: то, что сработало, хочется повторить. <strong>Протокол построен на этом режиме</strong>: 15–20 минут в день, которые тело начинает ждать.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -1289,7 +1278,7 @@ em.hl{font-style:italic}
 </section>
 
 <!-- ============ FINAL ============ -->
-<section class="sec bg-deep">
+<section class="sec bg-deep band">
   <div class="wrap">
     <div class="tag-line"><span class="tl"></span><span>Последнее</span><span class="tl"></span></div>
     <div class="final-line fade-in">Деньги не уходят сквозь пальцы. Их удерживает программа, которую вы теперь увидели. <strong>За 17 дней решать снова&nbsp;начнёте&nbsp;вы.</strong></div>
