@@ -147,6 +147,13 @@ nav.scrolled{background:rgba(244,243,238,.94);backdrop-filter:blur(10px);box-sha
 .recog-after{text-align:center;margin-top:44px;font-family:var(--f-display);font-style:italic;font-size:1.25rem;color:var(--ink);text-wrap:balance}
 
 
+.recog-grade{max-width:680px;margin:44px auto 0;border:1px solid var(--line);background:var(--paper)}
+.rg-row{display:flex;gap:18px;align-items:baseline;padding:16px 24px;border-bottom:1px solid var(--line);font-size:.96rem;line-height:1.6}
+.rg-row:last-child{border-bottom:none}
+.rg-num{font-family:'Fraunces',Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--green);flex:none;width:44px;text-align:right}
+.rg-row:last-child .rg-num{color:var(--red)}
+.rg-row:last-child span:last-child{font-style:italic;color:var(--ink)}
+
 /* ============ FLOORS FOOT ============ */
 .floors-foot{max-width:680px;margin:40px auto 0;text-align:center;font-size:1.04rem;line-height:1.7}
 .floors-foot strong{color:var(--ink)}
@@ -606,6 +613,12 @@ em.hl{font-style:italic}
       <div class="ig-caption">Схема 02 · Кривая, которую вы узнаёте: каждый подъём заканчивается <b>у одной и той же линии</b></div>
     </div>
 
+    <div class="recog-grade fade-in">
+      <div class="rg-row"><span class="rg-num">2+</span><span>совпадения: денежная программа активна и тихо управляет вашим доходом</span></div>
+      <div class="rg-row"><span class="rg-num">4+</span><span>совпадения: нервная система удерживает вас под потолком, и потери идут прямо сейчас</span></div>
+      <div class="rg-row"><span class="rg-num">6</span><span>совпадений: вы читаете это&nbsp;вовремя</span></div>
+    </div>
+
     <div class="recog-after fade-in">Это не про характер и не про невезение. Это почерк одной и той же программы. Дальше про то, как она устроена и где у неё&nbsp;рычаг.</div>
   </div>
 </section>
@@ -757,7 +770,7 @@ em.hl{font-style:italic}
     </div>
 
     <div class="wrap-n fade-in">
-      <p style="text-align:center;font-size:1.04rem;line-height:1.75">Вот почему «просто заработать больше» не решает ничего. Если за деньгами у вас безопасность, рост суммы приносит не покой, а новую тревогу: теперь есть что терять. Если значимость, деньги дают её ненадолго и вопроса не решают. Поэтому протокол начинается не с денег. Сначала он находит, <strong class="hl" style="color:var(--ink)">что стоит за деньгами лично у вас</strong>, и работает с этим. Деньги приходят следствием.</p>
+      <p style="text-align:center;font-size:1.04rem;line-height:1.75">Вот почему «просто заработать больше» не решает ничего. Если за деньгами у вас безопасность, рост суммы приносит не покой, а новую тревогу: теперь есть что терять. Не существует суммы, после которой станет спокойно, потому что тревожит не&nbsp;сумма. Если значимость, деньги дают её ненадолго и вопроса не решают. Поэтому протокол начинается не с денег. Сначала он находит, <strong class="hl" style="color:var(--ink)">что стоит за деньгами лично у вас</strong>, и работает с этим. Деньги приходят следствием.</p>
     </div>
   </div>
 </section>
@@ -1039,10 +1052,21 @@ em.hl{font-style:italic}
   </div>
 </section>
 
+<!-- ============ WHY IT MATTERS ============ -->
+<section class="sec bg-paper">
+  <div class="wrap-n">
+    <div class="tag-line"><span class="tl"></span><span>Глава 13 · Ради чего</span><span class="tl"></span></div>
+    <h2 class="sec-h">Ради чего всё&nbsp;<em>это</em></h2>
+    <p style="font-size:1.06rem;text-align:center;line-height:1.78">Большинство тратит жизнь по одной формуле: заработать деньги, чтобы потом потратить деньги, чтобы когда-нибудь наконец начать жить. Протокол разворачивает эту формулу. Сначала состояние, ради которого вы и хотели деньги: спокойствие, лёгкость, ощущение «со мной всё в порядке». Из этого состояния по-другому работается, по-другому называется цена, по-другому принимаются&nbsp;решения.</p>
+    <p style="font-size:1.06rem;text-align:center;line-height:1.78;margin-top:16px">А деньги приходят как вознаграждение за игру, в которую стало интересно играть. Не цель, на которой сжимаешься. <strong style="color:var(--ink)">Следствие.</strong></p>
+    <div class="recog-after fade-in" style="margin-top:38px">Лёгкость можно себе позволить. Парадокс в том, что это навык. <span class="hl">И он&nbsp;тренируется.</span></div>
+  </div>
+</section>
+
 <!-- ============ FIT ============ -->
 <section class="sec bg-soft">
   <div class="wrap">
-    <div class="tag-line"><span class="tl"></span><span>Глава 13 · Кому</span><span class="tl"></span></div>
+    <div class="tag-line"><span class="tl"></span><span>Глава 14 · Кому</span><span class="tl"></span></div>
     <h2 class="sec-h">Кому подойдёт. И кому&nbsp;<em>нет</em></h2>
     <p class="sec-sub">Протокол не «для всех». Честная разметка сэкономит время и вам, и&nbsp;нам.</p>
 
@@ -1071,7 +1095,7 @@ em.hl{font-style:italic}
 <!-- ============ AUTHOR ============ -->
 <section class="sec">
   <div class="wrap">
-    <div class="tag-line"><span class="tl"></span><span>Глава 14 · Кто ведёт</span><span class="tl"></span></div>
+    <div class="tag-line"><span class="tl"></span><span>Глава 15 · Кто ведёт</span><span class="tl"></span></div>
     <h2 class="sec-h">Дарья <em>Ростовцева</em></h2>
     <p class="sec-sub">Сооснователь проекта «Архитектура&nbsp;сознания»</p>
 
@@ -1156,6 +1180,7 @@ em.hl{font-style:italic}
     </div>
 
     <div class="other-paths fade-in">
+      Для ориентира: трёхчасовая запись «Биохимии денег» стоит 1 990 ₽. Перед вами 17 дней ежедневной работы.<br>
       Ещё не читали досье «Кто решает, сколько у вас денег?» <a href="https://thebodymindcode.github.io/moneyprotocol/" target="_blank" rel="noopener">Начните с него, это бесплатно</a>.<br>
       Остались вопросы? <a href="https://t.me/TheBodyMindCode_support" target="_blank" rel="noopener">Напишите нам в Telegram</a>, отвечаем быстро.
     </div>
@@ -1165,7 +1190,7 @@ em.hl{font-style:italic}
 <!-- ============ OBJECTIONS ============ -->
 <section class="sec">
   <div class="wrap-m">
-    <div class="tag-line"><span class="tl"></span><span>Глава 15 · Перед решением</span><span class="tl"></span></div>
+    <div class="tag-line"><span class="tl"></span><span>Глава 16 · Перед решением</span><span class="tl"></span></div>
     <h2 class="sec-h">Скорее всего, вы уже подумали что-то из&nbsp;<em>этого</em></h2>
     <p class="sec-sub">И правильно, скепсис здесь уместен. Ответим на него&nbsp;прямо.</p>
 
@@ -1180,7 +1205,7 @@ em.hl{font-style:italic}
       </div>
       <div class="objection fade-in">
         <div class="obj-q">«А вдруг это просто&nbsp;самовнушение?»</div>
-        <p>Каждая мысль похожа на тропинку в лесу: чем чаще по ней ходят, тем шире она становится, пока не превратится в автостраду. Человек, который годами думает «у меня не получится», в конце концов искренне в это верит. Это и есть самовнушение, только стихийное и направленное против вас. Протокол использует тот же механизм нейропластичности, но осознанно и в обратную сторону.</p>
+        <p>Каждая мысль похожа на тропинку в лесу: чем чаще по ней ходят, тем шире она становится, пока не превратится в автостраду. Так хирург после тысяч операций двигает руками без дрожи. И так же человек, который годами думает «у меня не получится», в конце концов искренне в это верит. Это и есть самовнушение, только стихийное и направленное против вас. Протокол использует тот же механизм нейропластичности, но осознанно и в обратную сторону.</p>
       </div>
       <div class="objection fade-in">
         <div class="obj-q">«Может, мне просто нужно больше&nbsp;работать?»</div>
@@ -1197,7 +1222,7 @@ em.hl{font-style:italic}
 <!-- ============ FAQ ============ -->
 <section class="sec bg-soft">
   <div class="wrap-m">
-    <div class="tag-line"><span class="tl"></span><span>Глава 16 · Вопросы</span><span class="tl"></span></div>
+    <div class="tag-line"><span class="tl"></span><span>Глава 17 · Вопросы</span><span class="tl"></span></div>
     <h2 class="sec-h">Всё, что обычно&nbsp;<em>спрашивают</em></h2>
     <p class="sec-sub">Не нашли свой вопрос? Напишите в поддержку, отвечаем&nbsp;быстро.</p>
 
@@ -1221,6 +1246,10 @@ em.hl{font-style:italic}
       <div class="faq-item">
         <button class="faq-q">Нужна ли подготовка или опыт практик?</button>
         <div class="faq-a"><p>Нет. Понадобятся только наушники, 15–20 минут в день и готовность делать задания, а не только слушать.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Я в найме, не предприниматель. Мне подойдёт?</button>
+        <div class="faq-a"><p>Да. Протокол работает с внутренней нормой и реакцией на деньги, а они есть у всех. У фрилансера это цена за услуги, у наёмного специалиста разговор о повышении, у предпринимателя масштаб проектов. Программа одна и та же, меняются только декорации.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Это живой поток или записи?</button>
