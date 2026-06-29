@@ -1,0 +1,7 @@
+# Внутренние рабочие документы — не публиковать на сайт
+CLAUDE.md
+qa_check.py
+assets-prompts.md
+telegram-texts.md
+PACKAGE-README.md
+.DS_Store

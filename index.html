@@ -482,6 +482,32 @@ em.hl{font-style:italic}
   .t-price{font-size:2.2rem}
   .stat-grid{grid-template-columns:1fr 1fr}
 }
+
+/* ============ PLATFORM / APP ============ */
+.app-show{max-width:1000px;margin:0 auto 50px}
+.app-phones{display:flex;justify-content:center;align-items:flex-start;gap:30px;flex-wrap:wrap}
+.phone-wrap{text-align:center;flex:none}
+.phone{width:clamp(150px,44vw,250px);border-radius:36px;padding:9px;background:linear-gradient(158deg,#17271f,#0b1510);box-shadow:0 28px 60px rgba(20,40,30,.22),0 5px 16px rgba(20,40,30,.14)}
+.phone img{display:block;width:100%;border-radius:27px}
+.dev-cap{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--green);margin-top:15px;font-weight:600}
+.app-desk{max-width:860px;margin:36px auto 0;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 32px 72px rgba(20,40,30,.16)}
+.app-desk .db-bar{display:flex;align-items:center;gap:7px;padding:11px 15px;background:#EAE8DF;border-bottom:1px solid var(--line)}
+.app-desk .db-bar i{width:11px;height:11px;border-radius:50%;background:#CFC9BB;flex:none}
+.app-desk img{display:block;width:100%}
+.app-desk .dev-cap{margin:14px 0 0;text-align:center}
+.plat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.plat-card{background:var(--paper);border:1px solid var(--line);padding:28px 26px 26px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.plat-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(20,40,30,.09);border-color:var(--green)}
+.plat-ico{width:42px;height:42px;color:var(--green);margin-bottom:17px}
+.plat-ico svg{width:100%;height:100%;display:block}
+.plat-card h3{font-family:var(--f-display);font-size:1.14rem;font-weight:600;color:var(--ink);margin-bottom:9px;line-height:1.28}
+.plat-card p{font-size:.9rem;line-height:1.64;margin:0}
+.plat-access{display:flex;align-items:center;gap:18px;justify-content:center;flex-wrap:wrap;max-width:760px;margin:42px auto 0;padding:22px 28px;background:rgba(47,146,104,.06);border:1px solid rgba(47,146,104,.22)}
+.plat-access .pa-ico{width:30px;height:30px;color:var(--green);flex:none}
+.plat-access .pa-ico svg{width:100%;height:100%}
+.plat-access p{font-size:.96rem;color:var(--body-c);margin:0;line-height:1.55;max-width:560px}
+@media(max-width:860px){.plat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.plat-grid{grid-template-columns:1fr}.app-phones{gap:14px}.plat-access{flex-direction:column;text-align:center;padding:24px 20px}}
 </style>
 </head>
 <body>
@@ -1033,6 +1059,73 @@ em.hl{font-style:italic}
         <h3>Закрытый Telegram-канал</h3>
         <p>Поток идёт вместе: вы видите, что вы не одни в этой работе. Всё в одном месте, ничего не теряется.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ PLATFORM / APP ============ -->
+<section class="sec bg-soft">
+  <div class="wrap">
+    <div class="tag-line"><span class="tl"></span><span>Приложение программы</span><span class="tl"></span></div>
+    <h2 class="sec-h">17 дней, и виден каждый&nbsp;<em>шаг</em></h2>
+    <p class="sec-sub">Помимо закрытого Telegram-канала протокол открывается ещё и в личном приложении. Дни открываются по&nbsp;одному, внутри уроки, задания и дневник. И всегда видно, как далеко вы&nbsp;прошли.</p>
+
+    <div class="app-show fade-in">
+      <div class="app-phones">
+        <div class="phone-wrap">
+          <div class="phone"><img src="app-progress.webp" width="660" height="1434" alt="Экран прогресса: кольцо «пройдено 0 из 17» и текущий день" loading="lazy"></div>
+          <div class="dev-cap">Ваш прогресс</div>
+        </div>
+        <div class="phone-wrap">
+          <div class="phone"><img src="app-map.webp" width="660" height="1434" alt="Карта 17 дней: шаги открываются по одному" loading="lazy"></div>
+          <div class="dev-cap">Карта 17 дней</div>
+        </div>
+      </div>
+      <div class="app-desk">
+        <div class="db-bar"><i></i><i></i><i></i></div>
+        <img src="app-desktop.webp" width="1700" height="898" alt="Та же программа на компьютере: личный прогресс и этапы пути" loading="lazy">
+      </div>
+      <div class="dev-cap" style="text-align:center;margin-top:14px">И так&nbsp;же на&nbsp;компьютере</div>
+    </div>
+
+    <div class="plat-grid">
+      <div class="plat-card fade-in">
+        <div class="plat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" opacity=".25"/><path d="M12 3a9 9 0 0 1 9 9"/><path d="M8.4 12.4l2.5 2.5 4.7-5.2"/></svg></div>
+        <h3>Прогресс на&nbsp;виду</h3>
+        <p>Кольцо «пройдено N из&nbsp;17» и пять этапов пути. Открываете приложение и сразу видите, где вы и сколько уже за&nbsp;плечами.</p>
+      </div>
+      <div class="plat-card fade-in d1">
+        <div class="plat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg></div>
+        <h3>Карта 17&nbsp;дней</h3>
+        <p>Шаги открываются по&nbsp;одному, день за&nbsp;днём. Пропустили день, спокойно догоните: ничего не&nbsp;сгорает.</p>
+      </div>
+      <div class="plat-card fade-in d2">
+        <div class="plat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><path d="M6 14a2 2 0 0 0-2 2v2a2 2 0 0 0 4 0v-3a1 1 0 0 0-1-1z"/><path d="M18 14a2 2 0 0 1 2 2v2a2 2 0 0 1-4 0v-3a1 1 0 0 1 1-1z"/></svg></div>
+        <h3>Уроки и&nbsp;задания</h3>
+        <p>Каждый день короткий урок и два-три коротких задания. Отмечаете выполненное, и оно остаётся в&nbsp;истории.</p>
+      </div>
+      <div class="plat-card fade-in">
+        <div class="plat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="13" height="17" rx="1.5"/><path d="M9 3.5v17"/><path d="M11.5 8h4"/><path d="M11.5 12h4"/></svg></div>
+        <h3>Дневник состояния</h3>
+        <p>Вечером отмечаете себя на шкале от тревоги к&nbsp;спокойствию. Через неделю видно, как меняется фон, который раньше казался просто характером.</p>
+      </div>
+      <div class="plat-card fade-in d1">
+        <div class="plat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="13.5" height="9" rx="1"/><path d="M1.5 17h13"/><rect x="16.5" y="9.5" width="5.5" height="10.5" rx="1.2"/></svg></div>
+        <h3>Телефон и&nbsp;компьютер</h3>
+        <p>Прогресс привязан к вашей почте, а не к&nbsp;устройству. Начали с телефона в дороге, продолжили с ноутбука дома: всё на&nbsp;месте.</p>
+      </div>
+      <div class="plat-card fade-in d2">
+        <div class="plat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="3" width="11" height="18" rx="2.2"/><path d="M12 8v6"/><path d="M9.4 11.6 12 14.2l2.6-2.6"/></svg></div>
+        <h3>Как приложение</h3>
+        <p>Ставится на главный экран в один тап, на айфоне и на&nbsp;Android. Открывается в одно касание, иконкой зелёный&nbsp;рубль.</p>
+      </div>
+    </div>
+
+    <div class="plat-access fade-in">
+      <div class="pa-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="12" r="4"/><path d="M12 12h9"/><path d="M17 12v3"/><path d="M20 12v2"/></svg></div>
+      <p>Доступ открывается сразу после оплаты: входите по своей почте. Скачивать из магазинов ничего не нужно, протокол открывается по&nbsp;ссылке.</p>
     </div>
   </div>
 </section>
