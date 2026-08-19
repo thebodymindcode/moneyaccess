@@ -15,6 +15,10 @@
 <meta name="twitter:title" content="Протокол денег: 17 дней перенастройки денежной программы">
 <meta name="twitter:description" content="17 дней работы с денежной программой на четырёх уровнях. Старт второго потока в сентябре. 20 минут в день.">
 <meta name="twitter:image" content="https://thebodymindcode.github.io/moneyaccess/og-cover%20(1).jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0E2018">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thebodymindcode.github.io/moneyaccess/">
 <meta property="og:locale" content="ru_RU">
@@ -509,6 +513,26 @@ em.hl{font-style:italic}
 .plat-access p{font-size:.96rem;color:var(--body-c);margin:0;line-height:1.55;max-width:560px}
 @media(max-width:860px){.plat-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.plat-grid{grid-template-columns:1fr}.app-phones{gap:14px}.plat-access{flex-direction:column;text-align:center;padding:24px 20px}}
+/* ===== ПОТОК 2: плашка в шапке и инфографика пути ===== */
+.potok-chip{display:inline-flex;align-items:stretch;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--green);margin-bottom:24px;background:rgba(28,92,68,.04)}
+.potok-chip .pc-n{background:var(--green);color:#F2F1E8;padding:9px 16px;font-weight:600;letter-spacing:.22em;white-space:nowrap}
+.potok-chip .pc-t{padding:9px 18px;color:var(--green);white-space:nowrap;display:flex;align-items:center}
+.potok-chip .pc-t b{font-weight:600}
+.potok-chip .pc-t s{text-decoration:none;color:var(--faint);margin:0 10px}
+
+.flow{max-width:940px;margin:0 auto 46px}
+.flow-head{display:flex;align-items:center;justify-content:center;gap:14px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mint);margin-bottom:22px;flex-wrap:wrap}
+.flow-head .fh-l{width:38px;height:1px;background:linear-gradient(90deg,transparent,var(--mint));opacity:.5;flex:none}
+.flow-head .fh-l:last-child{background:linear-gradient(90deg,var(--mint),transparent)}
+.flow-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line-dark);background:rgba(143,230,187,.045)}
+.flow-i{padding:26px 22px 28px;border-right:1px solid var(--line-dark)}
+.flow-i:last-child{border-right:none}
+.flow-n{display:flex;align-items:center;gap:12px;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.18em;color:var(--mint);margin-bottom:16px}
+.flow-n::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(143,230,187,.45),transparent)}
+.flow-t{font-family:var(--f-display);font-size:1.06rem;line-height:1.35;color:#EAF3ED;margin-bottom:9px;text-wrap:balance}
+.flow-p{font-size:.9rem;line-height:1.6;color:var(--mint-soft);opacity:.82;text-wrap:pretty}
+@media(max-width:860px){.flow-grid{grid-template-columns:repeat(2,1fr)}.flow-i:nth-child(2){border-right:none}.flow-i:nth-child(1),.flow-i:nth-child(2){border-bottom:1px solid var(--line-dark)}}
+@media(max-width:560px){.flow-grid{grid-template-columns:1fr}.flow-i{border-right:none;border-bottom:1px solid var(--line-dark)}.flow-i:last-child{border-bottom:none}.potok-chip{font-size:.64rem}.potok-chip .pc-n,.potok-chip .pc-t{padding:8px 13px}}
 </style>
 </head>
 <body>
@@ -521,13 +545,13 @@ em.hl{font-style:italic}
 
 <!-- ============ HERO ============ -->
 <section class="hero">
+  <div class="potok-chip"><span class="pc-n">Поток 2</span><span class="pc-t"><b>Старт в сентябре</b><s>·</s>набор открыт</span></div>
   <div class="tag-line"><span class="tl"></span><span>Закрытая программа · Нейробиология денег</span><span class="tl"></span></div>
   <h1 class="hero-h1">Протокол <em>денег</em></h1>
   <p class="hero-sub">17 дней перенастройки <span class="hl">денежной&nbsp;программы</span></p>
 
 
   <div class="hero-meta">
-    <span><i></i>Старт в сентябре</span>
     <span><i></i>17 дней</span>
     <span><i></i>20 минут в день</span>
     <span><i></i>Платформа и Telegram-канал</span>
@@ -1261,7 +1285,31 @@ em.hl{font-style:italic}
     <h2 class="sec-h">Войти в&nbsp;<em>протокол</em></h2>
     <p class="sec-sub">Второй поток стартует в сентябре, точную дату объявим заранее. Уроки открываются день за днём в закрытом Telegram-канале и в приложении программы.</p>
 
-    <div class="start-strip fade-in"><span class="ss-dot"></span><span>Старт потока: <b>сентябрь</b></span><span>·</span><span>17 дней · Telegram и приложение · доступ навсегда</span></div>
+    <div class="flow fade-in">
+      <div class="flow-head"><span class="fh-l"></span><span>Как проходит поток 2</span><span class="fh-l"></span></div>
+      <div class="flow-grid">
+        <div class="flow-i">
+          <div class="flow-n">01</div>
+          <div class="flow-t">Оплата и письмо</div>
+          <div class="flow-p">Выбираете тариф и оплачиваете. Письмо с доступом приходит на указанную&nbsp;почту.</div>
+        </div>
+        <div class="flow-i">
+          <div class="flow-n">02</div>
+          <div class="flow-t">Закрытый канал</div>
+          <div class="flow-p">Заходите в канал потока в тот же день. Там появится точная дата&nbsp;старта.</div>
+        </div>
+        <div class="flow-i">
+          <div class="flow-n">03</div>
+          <div class="flow-t">Старт в сентябре</div>
+          <div class="flow-p">В день старта приходит первый урок и открывается приложение&nbsp;программы.</div>
+        </div>
+        <div class="flow-i">
+          <div class="flow-n">04</div>
+          <div class="flow-t">Семнадцать дней</div>
+          <div class="flow-p">Каждый день урок, практика и задание. Двадцать минут, доступ&nbsp;навсегда.</div>
+        </div>
+      </div>
+    </div>
 
     <div class="tariffs">
       <div class="tariff fade-in">
