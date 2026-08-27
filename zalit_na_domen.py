@@ -19,19 +19,43 @@ import urllib.request
 
 ZDES = pathlib.Path(__file__).resolve().parent
 DOSTUP = pathlib.Path.home() / ".business/sites/.beget_ftp_tbc"
-PAPKA = "/protokol"
+# Папку можно передать первым доводом: страница живёт и по старому адресу /moneyaccess/,
+# который уже сидит в поиске. Обе копии держим одинаковыми.
+PAPKA = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1].startswith("/") else "/protokol"
 SAJT = "https://thebodymindcode.ru"
 
-# страница и всё, что она грузит рядом с собой
-FAJLY = ["index.html", "og-cover (1).jpg", "app-desktop.webp", "app-map.webp",
-         "app-progress.webp", "favicon.ico", "favicon-32.png", "favicon-512.png",
-         "apple-touch-icon.png", "404.html"]
+# Страница и всё, что она грузит рядом с собой.
+# Список собирается ИЗ САМОЙ СТРАНИЦЫ: жёсткий перечень уже один раз подвёл, новые
+# скриншоты не уехали на домен, и там висели битые картинки (27.08.2026).
+import re as _re
+
+
+def sobrat_fajly():
+    htm = (ZDES / "index.html").read_text(encoding="utf-8")
+    nashlos = set(_re.findall(r'(?:src|href)="([^"]+\.(?:webp|jpg|jpeg|png|ico|svg|css|js))"', htm))
+    fajly = ["index.html"]
+    for imya in sorted(nashlos):
+        if imya.startswith(("http", "//", "data:")):
+            continue
+        if (ZDES / imya).is_file():
+            fajly.append(imya)
+    # то, что страница не упоминает, но браузер просит сам
+    for imya in ["favicon.ico", "favicon-32.png", "favicon-512.png", "apple-touch-icon.png",
+                 "og-cover (1).jpg", "404.html"]:
+        if imya not in fajly and (ZDES / imya).is_file():
+            fajly.append(imya)
+    return fajly
+
+
+FAJLY = None   # считается в main(), см. sobrat_fajly()
 
 
 def main():
     cfg = dict(l.strip().split("=", 1) for l in DOSTUP.read_text().splitlines()
                if "=" in l and not l.startswith("#"))
     koren = cfg["root"].rstrip("/") + PAPKA
+    spisok = sobrat_fajly()
+    print("к заливке файлов:", len(spisok))
 
     ftp = ftplib.FTP(cfg["host"], cfg["user"], cfg["pass"], timeout=120)
     ftp.set_pasv(True)
@@ -41,7 +65,7 @@ def main():
         pass
 
     horosho, plohо = 0, 0
-    for imya in FAJLY:
+    for imya in spisok:
         mestno = ZDES / imya
         if not mestno.is_file():
             print(f"нет файла: {imya}")
