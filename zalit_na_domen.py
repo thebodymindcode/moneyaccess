@@ -23,6 +23,8 @@ DOSTUP = pathlib.Path.home() / ".business/sites/.beget_ftp_tbc"
 # который уже сидит в поиске. Обе копии держим одинаковыми.
 PAPKA = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1].startswith("/") else "/protokol"
 SAJT = "https://thebodymindcode.ru"
+# Настоящая страница лежит в _istochnik: на гитхабе в корне остался переброс на домен.
+ISTOCHNIK = "_istochnik/stranica.html"
 
 # Страница и всё, что она грузит рядом с собой.
 # Список собирается ИЗ САМОЙ СТРАНИЦЫ: жёсткий перечень уже один раз подвёл, новые
@@ -31,9 +33,9 @@ import re as _re
 
 
 def sobrat_fajly():
-    htm = (ZDES / "index.html").read_text(encoding="utf-8")
+    htm = (ZDES / ISTOCHNIK).read_text(encoding="utf-8")
     nashlos = set(_re.findall(r'(?:src|href)="([^"]+\.(?:webp|jpg|jpeg|png|ico|svg|css|js))"', htm))
-    fajly = ["index.html"]
+    fajly = [ISTOCHNIK]
     for imya in sorted(nashlos):
         if imya.startswith(("http", "//", "data:")):
             continue
@@ -70,13 +72,14 @@ def main():
         if not mestno.is_file():
             print(f"нет файла: {imya}")
             continue
-        cel = f"{koren}/{imya}"
+        # настоящая страница лежит в _istochnik, а на домене она обязана быть index.html
+        cel = f"{koren}/" + ("index.html" if imya == ISTOCHNIK else imya)
         with mestno.open("rb") as fh:
             ftp.storbinary("STOR " + cel, fh)
         # Beget умеет ответить «ок» на пустую заливку, поэтому сверяем размер
         na_servere = ftp.size(cel)
         if na_servere == mestno.stat().st_size:
-            print(f"ok  {imya:<26} {na_servere} б")
+            print(f"ok  {cel.rsplit('/', 1)[-1]:<26} {na_servere} б")
             horosho += 1
         else:
             print(f"ПЛОХО {imya}: локально {mestno.stat().st_size}, на сервере {na_servere}")
